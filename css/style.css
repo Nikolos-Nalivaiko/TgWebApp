@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fff;
+  color: #333;
+  padding: 1rem;
+}
+.container {
+  max-width: 360px;
+  margin: auto;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.logo {
+  width: 24px;
+}
+.status {
+  font-size: 0.9rem;
+  color: #4caf50;
+  font-weight: normal;
+}
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4caf50;
+  font-size: 1rem;
+}
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.green {
+  background-color: #4caf50;
+}
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+button.launch,
+button.stop {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+}
+button.launch {
+  background-color: #e8f5e9;
+  color: #4caf50;
+}
+button.stop {
+  background-color: #ffebee;
+  color: #f44336;
+}
+main label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button.save {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
