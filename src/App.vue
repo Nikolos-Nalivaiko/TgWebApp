@@ -27,74 +27,74 @@
 
 <script></script>
 
-<style lang="scss" scoped>
+<style scoped>
 .header {
   background-color: #3c5cfd;
   height: 100px;
   position: relative;
+}
 
-  &__subtitle {
-    font-weight: 700;
-    color: #bdc2df;
-  }
+.header__subtitle {
+  font-weight: 700;
+  color: #bdc2df;
+}
 
-  &__status {
-    color: #3e7b27;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.header__status {
+  color: #3e7b27;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-    &::before {
-      content: "";
-      display: inline-block;
-      width: 5px;
-      height: 5px;
-      background-color: #3e7b27;
-      border-radius: 50%;
-    }
-  }
+.header__status::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #3e7b27;
+  border-radius: 50%;
+}
 
-  &__bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
+.header__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
 
-  &__active {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+.header__active {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-  &__top {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #e2dad6;
-  }
+.header__top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2dad6;
+}
 
-  &__line {
-    display: inline-block;
-    height: 20px;
-    width: 1px;
-    background-color: #e2dad6;
-  }
+.header__line {
+  display: inline-block;
+  height: 20px;
+  width: 1px;
+  background-color: #e2dad6;
+}
 
-  &__block {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 15px;
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 320px;
-    width: 100%;
-  }
+.header__block {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 320px;
+  width: 100%;
 }
 
 .app {
