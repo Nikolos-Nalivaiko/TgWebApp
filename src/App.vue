@@ -27,25 +27,40 @@ export default {
   <div class="app">
     <div class="header">
       <div class="container">
-        <div class="header__block">
-          <div class="header__top">
-            <h1>{{ shortName }}</h1>
-            <span class="header__line"></span>
-            <p class="header__subtitle">Active+</p>
-          </div>
-          <div class="header__bottom">
-            <div class="header__active">
-              <img
-                src="/icons/activeIcon.svg"
-                alt=""
-                class="header__active-icon"
-              />
-              <p class="header__active-name">IMX (91%)</p>
+        <div class="header__block-wrapper">
+          <div class="header__block">
+            <div class="header__top">
+              <h1>{{ shortName }}</h1>
+              <span class="header__line"></span>
+              <p class="header__subtitle">Active+</p>
             </div>
-            <!-- <p class="header__status">В работе</p> -->
-            <p class="header__status header__status--stop">Остановлен</p>
+            <div class="header__bottom">
+              <div class="header__active">
+                <img
+                  src="/icons/activeIcon.svg"
+                  alt=""
+                  class="header__active-icon"
+                />
+                <p class="header__active-name">IMX (91%)</p>
+              </div>
+              <!-- <p class="header__status">В работе</p> -->
+              <p class="header__status header__status--stop">Остановлен</p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="btns">
+        <button class="btn btn--start">
+          <img src="/icons/start.svg" alt="" class="btn__icon" />
+          Запустить
+        </button>
+        <button class="btn btn--stop">
+          <img src="/icons/stop.svg" alt="" class="btn__icon" />
+          Остановить
+        </button>
       </div>
     </div>
   </div>
@@ -121,17 +136,53 @@ export default {
   padding: 20px;
   background-color: #fff;
   border-radius: 15px;
+}
+
+.header__block-wrapper {
+  max-width: 600px;
+  padding-right: 20px;
+  padding-left: 20px;
   position: absolute;
+  width: 100%;
   top: 35px;
   left: 50%;
   transform: translateX(-50%);
-  max-width: 320px;
-  width: 100%;
 }
 
 .app {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 125px;
+}
+
+.btn {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn--start {
+  color: #fff;
+  background-color: #3c5cfd;
+}
+
+.btn--stop {
+  color: #e52020;
+  background-color: #fff;
 }
 </style>
