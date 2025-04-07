@@ -1,10 +1,35 @@
+<script>
+export default {
+  data() {
+    return {
+      // shortName: "NKLS",
+      shortName: "____",
+    };
+  },
+  mounted() {
+    if (window.Telegram?.WebApp?.initDataUnsafe) {
+      const data = window.Telegram.WebApp.initDataUnsafe;
+      const name =
+        data?.chat?.title ||
+        data?.user?.username ||
+        data?.user?.first_name ||
+        "Guest";
+
+      this.shortName = name.slice(0, 4).toUpperCase();
+    } else {
+      console.warn("Telegram WebApp не найден");
+    }
+  },
+};
+</script>
+
 <template>
   <div class="app">
     <div class="header">
       <div class="container">
         <div class="header__block">
           <div class="header__top">
-            <h1>NKLS</h1>
+            <h1>{{ shortName }}</h1>
             <span class="header__line"></span>
             <p class="header__subtitle">Active+</p>
           </div>
@@ -17,15 +42,14 @@
               />
               <p class="header__active-name">IMX (91%)</p>
             </div>
-            <p class="header__status">Активный</p>
+            <!-- <p class="header__status">В работе</p> -->
+            <p class="header__status header__status--stop">Остановлен</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-
-<script></script>
 
 <style scoped>
 .header {
@@ -68,6 +92,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.header__status--stop {
+  color: #ff0000;
+}
+
+.header__status--stop::before {
+  background-color: #ff0000;
 }
 
 .header__top {
